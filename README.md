@@ -44,7 +44,6 @@ States are identified using their names, which are unique and case sensitive(sta
 Endpoint for getting LGAs in Abia
 ```json
 [
-  },
   {
     "name": "Aba North"
   },
@@ -98,6 +97,14 @@ Endpoint for getting LGAs in Abia
   },
 ]
 ```
+# List of endpoints
+This is just a summary of all four endpoints you can call.
+
+* `GET /states/` returns a list of all states in Nigeria.
+* `GET /state/<state_name>/` returns a state. pass in the state name i.e Abuja.
+* `GET /state/<state_name>/lga/` returns a list of LGAs in a state. pass in the state name i.e Abuja.
+
 <hr>
+
 # Contributions
 Contributions are always welcome! Please read the [Contribution guidelines for this project](docs/CONTRIBUTING.md).
