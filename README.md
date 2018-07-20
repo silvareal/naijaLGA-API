@@ -37,7 +37,7 @@ States are identified using their names, which are unique and case sensitive(sta
     "capital": "Umuahia",
     "longitude": 22.92,
     "latitude": -1.9,
-},
+}
 ```
 
 # Local Government Areas (LGAs)
