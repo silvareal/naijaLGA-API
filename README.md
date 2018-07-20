@@ -100,10 +100,12 @@ Endpoint for getting LGAs in Abia
 # List of endpoints
 This is just a summary of all four endpoints you can call.
 
-* `GET /states/` returns a list of all states in Nigeria.
-* `GET /state/<state_name>/` returns a state. pass in the state name i.e Abuja.
-* `GET /state/<state_name>/lga/` returns a list of LGAs in a state. pass in the state name i.e Abuja.
+* `GET /states/` returns a list of all states in `Nigeria`.
+* `GET /state/<state_name>/` returns a state. pass in the state name i.e `Abuja`.
+* `GET /state/<state_name>/lga/` returns a list of LGAs in a state. pass in the state name i.e `Abuja`.
 
+# Using Django Rest Freamework(DRF)
+Django REST framework is a powerful and flexible toolkit for building Web APIs 👉 [more details](http://www.django-rest-framework.org/). 
 <hr>
 
 # Contributions
