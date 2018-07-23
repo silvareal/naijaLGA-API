@@ -15,8 +15,6 @@ class StateSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('state', 'capital', 'longitude', 'latitude', 'lga')
         lookup_field = 'state'
 
-
-
     def create(self, validated_data):
         lgas_data = validated_data.pop('lga')
         state = State.objects.create(**validated_data)
