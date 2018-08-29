@@ -18,20 +18,20 @@ To get the list of all states in Nigeria, Endpoint. [{domain}/api/v1/state/](#)
   {
       "state": "Abia",
       "capital": "Umuahia",
-      "longitude": 22.92,
+      "lat": 22.92,
       "population": 2338487,
-      "cord": {
-        "latitude": -1.9,
-        "longitude": 22.92,
+      "coord": {
+        "lon": -1.9,
+        "lat": 22.92,
       }
   },
   {
     "state": "Adamawa",
     "capital": "Yola",
     "population": 2102053,
-    "cord": {
-      "longitude": 9.92,
-      "latitude": -12.9233,
+    "coord": {
+      "lon": 9.92,
+      "lat": -12.9233,
     }
   },
   ...
@@ -42,8 +42,8 @@ States are identified using their names, which are unique and case sensitive(sta
 {
     "state": "Abia",
     "capital": "Umuahia",
-    "longitude": 22.92,
-    "latitude": -1.9,
+    "lon": 22.92,
+    "lat": -1.9,
 }
 ```
 
@@ -54,55 +54,56 @@ To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/ap
   {
       "state": "Abia",
       "capital": "Umuahia",
-      "longitude": 22.92,
+      "lat": 22.92,
       "population": 2338487,
-      "cord": {
-        "latitude": -1.9,
-        "longitude": 22.92,
+      "coord": {
+        "lon": -1.9,
+        "lat": 22.92,
       },
       "lga": [
-          {
-              "name": "close",
-              "population": 991011,
-              "coord": {
-                  "lon": 9.000001,
-                  "lat": 1e-06
-              }
-          },
-          {
-              "name": "lome",
-              "population": 28292901,
-              "coord": {
-                  "lon": 2e-06,
-                  "lat": -1e-06
-              }
-          },
-          {
-              "name": "magodo",
-              "population": 7282899,
-              "coord": {
-                  "lon": -5e-06,
-                  "lat": 6e-06
-              }
-          },
-          {
-              "name": "olamaboro",
-              "population": 912202020,
-              "coord": {
-                  "lon": -1.5e-05,
-                  "lat": -1.7e-05
-              }
+        {
+          "name": "Aba North",
+          "population": 991011,
+          "coord": {
+            "lon": 9.000001,
+            "lat": 1e-06
           }
-        ]
+        },
+        {
+          "name": "Aba South",
+          "population": 991011,
+          "coord": {
+            "lon": 9.000001,
+            "lat": 1e-06
+          }
+        },
+        {
+          "name": "Arochukwu",
+          "population": 991011,
+          "coord": {
+            "lon": 9.000001,
+            "lat": 1e-06
+          }
+        },
+        {
+          "name": "Bende",
+          "population": 991011,
+          "coord": {
+            "lon": 9.000001,
+            "lat": 1e-06
+          }
+        },
+        ...
+      ]
     }
   },
   {
     "state": "Adamawa",
     "capital": "Yola",
     "population": 2102053,
-    "cord": {
-      "longitude": 9.92,
-      "latitude": -12.9233,
+    "coord": {
+      "lon": 9.92,
+      "lat": -12.9233,
     }
   },
   ...
@@ -113,8 +114,8 @@ States are identified using their names, which are unique and case sensitive(sta
 {
     "state": "Abia",
     "capital": "Umuahia",
-    "longitude": 22.92,
-    "latitude": -1.9,
+    "lon": 22.92,
+    "lat": -1.9,
 }
 ```
 
