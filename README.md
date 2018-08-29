@@ -21,8 +21,8 @@ To get the list of all states in Nigeria, Endpoint. [{domain}/api/v1/state/](#)
     "lat": 22.92,
     "population": 2338487,
     "coord": {
-      "lon": -1.9,
-      "lat": 22.92,
+      "lon": 7.515307,
+      "lat": 5.454095,
     },
   },
   {
