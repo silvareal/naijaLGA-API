@@ -14,7 +14,7 @@ We hope to improve this API on every release version, and these changes won't al
 # States
 To get the list of all states in Nigeria, Endpoint. [{domain}/api/v1/state/](#)
 ```json
-{
+[
   {
     "state": "Abia",
     "capital": "Umuahia",
@@ -35,7 +35,7 @@ To get the list of all states in Nigeria, Endpoint. [{domain}/api/v1/state/](#)
     }
   },
   ...
-}
+]
 ```
 States are identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/states/Abia/](#)
 ```json
@@ -54,7 +54,7 @@ States are identified using their names, which are unique and case sensitive(sta
 # States And Their LGA's
 To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/api/v1/stateslga/](#)
 ```json
-{
+[
   {
     "state": "Abia",
     "capital": "Umuahia",
@@ -145,7 +145,7 @@ To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/ap
     ]
   },
   ...
-}
+]
 ```
 States and their LGA's identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/stateslga/Abia/](#)
 ```json
