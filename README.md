@@ -14,23 +14,30 @@ We hope to improve this API on every release version, and these changes won't al
 # States
 To get the list of all states in Nigeria, Endpoint. [{domain}/api/v1/state/](#)
 ```json
-[
+{
   {
       "state": "Abia",
       "capital": "Umuahia",
       "longitude": 22.92,
-      "latitude": -1.9,
+      "population": 2338487,
+      "cord": {
+        "latitude": -1.9,
+        "longitude": 22.92,
+      }
   },
   {
     "state": "Adamawa",
     "capital": "Yola",
-    "longitude": 9.92,
-    "latitude": -12.9233,
+    "population": 2102053,
+    "cord": {
+      "longitude": 9.92,
+      "latitude": -12.9233,
+    }
   },
   ...
- ]
+}
 ```
-States are identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/state/Abia/](#)
+States are identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/states/Abia/](#)
 ```json
 {
     "state": "Abia",
@@ -40,72 +47,53 @@ States are identified using their names, which are unique and case sensitive(sta
 }
 ```
 
-# Local Government Areas (LGAs)
-Endpoint for getting LGAs in Abia
+# States And Their LGA's
+To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/api/v1/stateslga/](#)
 ```json
-[
+{
   {
-    "name": "Aba North"
+      "state": "Abia",
+      "capital": "Umuahia",
+      "longitude": 22.92,
+      "population": 2338487,
+      "cord": {
+        "latitude": -1.9,
+        "longitude": 22.92,
+      }
   },
   {
-    "name": "Aba South"
+    "state": "Adamawa",
+    "capital": "Yola",
+    "population": 2102053,
+    "cord": {
+      "longitude": 9.92,
+      "latitude": -12.9233,
+    }
   },
-  {
-    "name": "Arochukwu"
-  },
-  {
-    "name": "Bende"
-  },
-  {
-    "name": "Ikwuano"
-  },
-  {
-    "name": "Isiala Ngwa North"
-  },
-  {
-    "name": "Isiala Ngwa South"
-  },
-  {
-    "name": "Isiukwuato"
-  },
-  {
-  "name": "Obi Ngwa"
-  },
-  {
-    "name": "Ohafia"
-  },
-  {
-    "name": "Osisioma Ngwa"
-  },
-  {
-    "name": "Ugwunagbo"
-  },
-  {
-  "name": "Ukwa East"
-  },
-  {
-  "name": "Ukwa West"
-  },
-  {
-  "name": "Umu Nneochi"
-  },
-  {
-  "name": "Umuahia North"
-  },
-  {
-  "name": "Umuahia South"
-  },
-]
+  ...
+}
 ```
+States are identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/stateslga/Abia/](#)
+```json
+{
+    "state": "Abia",
+    "capital": "Umuahia",
+    "longitude": 22.92,
+    "latitude": -1.9,
+}
+```
+
+
 # List of endpoints
 This is just a summary of all four endpoints you can call.
 
 * `GET /states/` returns a list of all states in `Nigeria`.
-* `GET /state/<state_name>/` returns a state. pass in the state name i.e `Abuja`.
-* `GET /state/<state_name>/lga/` returns a list of LGAs in a state. pass in the state name i.e `Abuja`.
+* `GET /states/<state_name>/` returns a state. pass in the state name i.e `Abuja`.
+* `GET /stateslga/` returns a list of all states in `Nigeria`.
+* `GET /stateslga/<state_name>/` returns a state. pass in the state name i.e `Abuja`.
 
 # Using Django Rest Freamework(DRF)
-Django REST framework is a powerful and flexible toolkit for building Web APIs 👉 [more details](http://www.django-rest-framework.org/). 
+Django REST framework is a powerful and flexible toolkit for building Web APIs 👉 [more details](http://www.django-rest-framework.org/).
 <hr>
 
 # Contributions

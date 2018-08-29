@@ -1,24 +1,37 @@
 from rest_framework import serializers
-from .models import State, LGA
+from .models import State, LGA, Coord
 
-class LgaSerializers(serializers.HyperlinkedModelSerializer):
+
+class CoordSerializers(serializers.ModelSerializer):
+
+    class Meta:
+        model = Coord
+        fields = ('lon', 'lat',)
+
+
+class LgaSerializers(serializers.ModelSerializer):
+    coord = CoordSerializers(read_only=True)
+
     class Meta:
         model = LGA
-        fields = ('name',)
+        fields = ('name', 'population', 'coord')
 
 
 class StateSerializer(serializers.HyperlinkedModelSerializer):
-    lga = LgaSerializers(many=True, read_only=True)
+    coord = CoordSerializers(read_only=True)
 
     class Meta:
         model = State
-        fields = ('state', 'capital', 'longitude', 'latitude', 'lga')
+        fields = ('state', 'capital', 'population', 'coord',)
         lookup_field = 'state'
 
-    def create(self, validated_data):
-        lgas_data = validated_data.pop('lga')
-        state = State.objects.create(**validated_data)
-        for lga_data in lgas_data:
-            LGA.objects.create(state=state, **lga_data)
-        return state
+
+class StateLGASerializer(serializers.HyperlinkedModelSerializer):
+    lga = LgaSerializers(many=True, read_only=True)
+    coord = CoordSerializers(read_only=True)
+
+    class Meta:
+        model = State
+        fields = ('state', 'capital', 'population', 'coord', 'lga')
+        lookup_field = 'state'
 
