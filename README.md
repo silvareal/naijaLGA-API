@@ -83,7 +83,7 @@ To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/ap
       },
       {
         "name": "Arochukwu",
-        "population": 169,339,
+        "population": 169339,
         "coord": {
           "lon": 7.916667,
           "lat": 5.383333
@@ -177,7 +177,7 @@ States and their LGA's identified using their names, which are unique and case s
     },
     {
       "name": "Arochukwu",
-      "population": 169,339,
+      "population": 169339,
       "coord": {
         "lon": 7.916667,
         "lat": 5.383333
