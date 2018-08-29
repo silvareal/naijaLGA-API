@@ -16,22 +16,22 @@ To get the list of all states in Nigeria, Endpoint. [{domain}/api/v1/state/](#)
 ```json
 {
   {
-      "state": "Abia",
-      "capital": "Umuahia",
+    "state": "Abia",
+    "capital": "Umuahia",
+    "lat": 22.92,
+    "population": 2338487,
+    "coord": {
+      "lon": -1.9,
       "lat": 22.92,
-      "population": 2338487,
-      "coord": {
-        "lon": -1.9,
-        "lat": 22.92,
-      }
+    },
   },
   {
     "state": "Adamawa",
     "capital": "Yola",
     "population": 2102053,
     "coord": {
-      "lon": 9.92,
-      "lat": -12.9233,
+      "lon": 12.388189,
+      "lat": 9.512977,
     }
   },
   ...
@@ -42,8 +42,12 @@ States are identified using their names, which are unique and case sensitive(sta
 {
     "state": "Abia",
     "capital": "Umuahia",
-    "lon": 22.92,
-    "lat": -1.9,
+    "lat": 22.92,
+    "population": 2338487,
+    "coord": {
+      "lon": 7.515307,
+      "lat": 5.454095,
+    },
 }
 ```
 
@@ -52,70 +56,143 @@ To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/ap
 ```json
 {
   {
-      "state": "Abia",
-      "capital": "Umuahia",
-      "lat": 22.92,
-      "population": 2338487,
-      "coord": {
-        "lon": -1.9,
-        "lat": 22.92,
+    "state": "Abia",
+    "capital": "Umuahia",
+    "lat": 22.92,
+    "population": 2845380,
+    "coord": {
+      "lon": 7.515307,
+      "lat": 5.454095,
+    },
+    "lga": [
+      {
+        "name": "Aba North",
+        "population": 106844,
+        "coord": {
+          "lon": 7.394788,
+          "lat": 5.093863
+        }
       },
-      "lga": [
-        {
-          "name": "Aba North",
-          "population": 991011,
-          "coord": {
-            "lon": 9.000001,
-            "lat": 1e-06
-          }
-        },
-        {
-          "name": "Aba South",
-          "population": 991011,
-          "coord": {
-            "lon": 9.000001,
-            "lat": 1e-06
-          }
-        },
-        {
-          "name": "Arochukwu",
-          "population": 991011,
-          "coord": {
-            "lon": 9.000001,
-            "lat": 1e-06
-          }
-        },
-        {
-          "name": "Bende",
-          "population": 991011,
-          "coord": {
-            "lon": 9.000001,
-            "lat": 1e-06
-          }
-        },
-        ...
-      ]
-    }
+      {
+        "name": "Aba South",
+        "population": 427421,
+        "coord": {
+          "lon": 7.349714,
+          "lat": 5.087659
+        }
+      },
+      {
+        "name": "Arochukwu",
+        "population": 169,339,
+        "coord": {
+          "lon": 7.916667,
+          "lat": 5.383333
+        }
+      },
+      {
+        "name": "Bende",
+        "population": 192621,
+        "coord": {
+          "lon": 9.000001,
+          "lat": 1e-06
+        }
+      },
+      ...
+    ]
   },
   {
     "state": "Adamawa",
     "capital": "Yola",
-    "population": 2102053,
+    "population": 3178950,
     "coord": {
-      "lon": 9.92,
-      "lat": -12.9233,
-    }
+      "lon": 12.388189,
+      "lat": 9.512977,
+    },
+    "lga": [
+      {
+        "name": "Demsa",
+        "population": 178407,
+        "coord": {
+          "lon": 12.150000,
+          "lat": 9.466667
+        }
+      },
+      {
+        "name": "Fufore",
+        "population": 209460,
+        "coord": {
+          "lon": 7.916667,
+          "lat": 9.258518
+        }
+      },
+      {
+        "name": "Ganye",
+        "population": 169948,
+        "coord": {
+          "lon": 11.854469,
+          "lat": 8.437999
+        }
+      },
+      {
+        "name": "Gombi",
+        "population": 147787,
+        "coord": {
+          "lon": 12.727279,
+          "lat": 10.155436
+        }
+      },
+      ...
+    ]
   },
   ...
 }
 ```
-States are identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/stateslga/Abia/](#)
+States and their LGA's identified using their names, which are unique and case sensitive(state begins with an uppercase `/Abia/`). For example, a state: [{domain}/api/v1/stateslga/Abia/](#)
 ```json
 {
-    "state": "Abia",
-    "capital": "Umuahia",
-    "lon": 22.92,
-    "lat": -1.9,
+  "state": "Abia",
+  "capital": "Umuahia",
+  "lat": 22.92,
+  "population": 2845380,
+  "coord": {
+    "lon": 7.515307,
+    "lat": 5.454095,
+  },
+  "lga": [
+    {
+      "name": "Aba North",
+      "population": 106844,
+      "coord": {
+        "lon": 7.394788,
+        "lat": 5.093863
+      }
+    },
+    {
+      "name": "Aba South",
+      "population": 427421,
+      "coord": {
+        "lon": 7.349714,
+        "lat": 5.087659
+      }
+    },
+    {
+      "name": "Arochukwu",
+      "population": 169,339,
+      "coord": {
+        "lon": 7.916667,
+        "lat": 5.383333
+      }
+    },
+    {
+      "name": "Bende",
+      "population": 192621,
+      "coord": {
+        "lon": 9.000001,
+        "lat": 1e-06
+      }
+    },
+    ...
+  ]
 }
 ```
 
