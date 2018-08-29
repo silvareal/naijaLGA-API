@@ -59,7 +59,42 @@ To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/ap
       "cord": {
         "latitude": -1.9,
         "longitude": 22.92,
-      }
+      },
+      "lga": [
+          {
+              "name": "close",
+              "population": 991011,
+              "coord": {
+                  "lon": 9.000001,
+                  "lat": 1e-06
+              }
+          },
+          {
+              "name": "lome",
+              "population": 28292901,
+              "coord": {
+                  "lon": 2e-06,
+                  "lat": -1e-06
+              }
+          },
+          {
+              "name": "magodo",
+              "population": 7282899,
+              "coord": {
+                  "lon": -5e-06,
+                  "lat": 6e-06
+              }
+          },
+          {
+              "name": "olamaboro",
+              "population": 912202020,
+              "coord": {
+                  "lon": -1.5e-05,
+                  "lat": -1.7e-05
+              }
+          }
+        ]
+    }
   },
   {
     "state": "Adamawa",
@@ -89,8 +124,8 @@ This is just a summary of all four endpoints you can call.
 
 * `GET /states/` returns a list of all states in `Nigeria`.
 * `GET /states/<state_name>/` returns a state. pass in the state name i.e `Abuja`.
-* `GET /stateslga/` returns a list of all states in `Nigeria`.
-* `GET /stateslga/<state_name>/` returns a state. pass in the state name i.e `Abuja`.
+* `GET /stateslga/` returns a list of all states and their LGA's in `Nigeria`.
+* `GET /stateslga/<state_name>/` returns a state and it's LGA's. pass in the state name i.e `Abuja`.
 
 # Using Django Rest Freamework(DRF)
 Django REST framework is a powerful and flexible toolkit for building Web APIs 👉 [more details](http://www.django-rest-framework.org/).
