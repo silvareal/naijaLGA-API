@@ -1,0 +1,1 @@
+web: gunicorn statesapi.wsgi --log-file -
