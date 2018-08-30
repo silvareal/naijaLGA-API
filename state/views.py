@@ -10,7 +10,14 @@ from .serializers import StateSerializer, StateLGASerializer
 
 class StateViewSet(viewsets.ModelViewSet):
     """
-    A simple ViewSet for viewing and editing the states.
+    retrieve:
+    Return the given states in Nigeria.
+
+    list:
+    Return a list of all states in Nigeria .
+
+    create:
+    Create a new state in Nigeria instance.
     """
     queryset = State.objects.all()
     serializer_class = StateSerializer
@@ -21,7 +28,14 @@ class StateViewSet(viewsets.ModelViewSet):
 
 class StateLGAViewSet(viewsets.ModelViewSet):
     """
-    A simple ViewSet for viewing and editing the states and localgovernment.
+    retrieve:
+    Return the given states in Nigeria and localgovernment.
+
+    list:
+    Return a list of all states in Nigeria and localgovernment.
+
+    create:
+    Create a new state in Nigeria and localgovernment instance.
     """
     queryset = State.objects.all()
     serializer_class = StateLGASerializer

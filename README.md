@@ -95,7 +95,7 @@ To get the list of all states and their LGA's in Nigeria, Endpoint. [{domain}/ap
         },
         ...
       ]
-    }
+
   },
   {
     "state": "Adamawa",

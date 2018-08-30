@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'state.apps.StateConfig',
     'django.contrib.humanize',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -116,3 +117,16 @@ STATICFILES_DIRS = [
 ]
 
 REST_FRAMEWORK = { 'COERCE_DECIMAL_TO_STRING': False }
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'basic': {
+            'type': 'basic'
+        }
+    },
+    'USE_SESSION_AUTH': False,
+    'SUPPORTED_SUBMIT_METHODS': ['get'],
+}
+
+LOGIN_URL = 'rest_framework:login'
+LOGOUT_URL = 'rest_framework:logout'
