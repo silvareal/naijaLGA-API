@@ -116,6 +116,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 REST_FRAMEWORK = { 'COERCE_DECIMAL_TO_STRING': False }
 
 SWAGGER_SETTINGS = {
