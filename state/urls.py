@@ -21,5 +21,5 @@ urlpatterns = [
 
     #api doc schema
     path(r'', schema_view),
-    url(r'^api/', include('rest_framework.urls')),
+    url(r'^api/v1/', include('rest_framework.urls')),
 ]
