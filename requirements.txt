@@ -8,4 +8,4 @@ whitenoise==3.3.1
 dj-database-url==0.5.0
 dj-static==0.0.6
 gunicorn==19.7.1
-django-cors-headers=3.1.0
+django-cors-headers==3.1.0
