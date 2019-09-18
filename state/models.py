@@ -39,21 +39,3 @@ class LGA(models.Model):
 
     def __str__(self):
         return f'{self.name}'
-
-'''
-class LGACord(models.Model):
-    lga = models.OneToOneField(LGA, on_delete=models.CASCADE)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
-
-    def __str__(self):
-        return
-
-
-class StateCord(models.Model):
-    state = models.OneToOneField(State,on_delete=models.CASCADE)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
-
-    def __str__(self):
-        return '''
